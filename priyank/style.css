@@ -1,25 +1,30 @@
 /* =============================================
-   Priyank's Styles (Updated)
+   Priyank's Styles (Clean & Optimized)
    ============================================= */
 
-* {
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ===== Base Styles ===== */
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   background: linear-gradient(135deg, #f0f0f5, #e6e6ff);
   color: #222;
+  line-height: 1.6;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
   padding: 20px 32px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .back-link {
@@ -27,7 +32,7 @@ header {
   color: #6c63ff;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .back-link:hover {
@@ -35,7 +40,7 @@ header {
   transform: translateX(-3px);
 }
 
-/* Main Layout (Center like index page) */
+/* ===== Layout ===== */
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -44,37 +49,69 @@ main {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertical center */
-  align-items: center;       /* horizontal center */
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* better spacing */
   text-align: center;
 }
 
-/* Title */
+/* ===== Typography ===== */
 .page-title {
   font-size: 3rem;
   font-weight: 800;
   color: #6c63ff;
-  margin-bottom: 20px;
 }
 
-/* Description Card */
-.description {
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== Card (Reusable) ===== */
+.card {
   background: #fff;
   padding: 30px;
   border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   max-width: 700px;
+  width: 100%;
 }
 
-/* Text */
+/* ===== Description ===== */
 .desc-text {
   font-size: 1.05rem;
-  line-height: 1.7;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-/* Remove old placeholder */
+/* ===== Skills Section ===== */
+.skills {
+  text-align: left;
+}
+
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category h3 {
+  font-size: 1.2rem;
+  color: #6c63ff;
+  margin-bottom: 8px;
+}
+
+.skill-list {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* ===== Utility ===== */
 .placeholder {
   display: none;
 }
